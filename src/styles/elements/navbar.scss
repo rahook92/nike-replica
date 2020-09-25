@@ -1,0 +1,62 @@
+.Navbar {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    .Logo {
+        width: 75px;
+        height: 40px;
+        background-color: darkgrey;
+        margin: 16px 0;
+        text-align: center;
+        padding: 8px 0 0 0;
+        box-sizing: border-box;
+    }
+    .Link-List {
+        list-style: none;
+        height: 40px;
+        padding-top: 8px;
+        box-sizing: border-box;
+        li {
+            height: 40px;
+            display: inline-block;
+            margin-left: 40px;
+            &:hover {
+                border-bottom: 2px solid black;
+            }
+            .Links {
+                text-decoration: none;
+                font-size: 16px;
+                vertical-align: middle;
+                &:visited {
+                    color: black;
+                }
+                &:hover {
+                    color: lightblue;
+                }
+            }
+        }
+    }
+    .Search-Bar {
+        width: 150px;
+        height: 40px;
+        background-color: lightgrey;
+        border-radius: 20px;
+        margin-left: 40px;
+    }
+    .Nav-Icons {
+        width: 120px;
+        height: 40px;
+        .Favorite-Icon, .Shopping-Bag-Icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: lightgrey;
+        }
+        .Shopping-Bag-Icon {
+            margin-left: 25px;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import Landing from './containers/Landing.js';
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
