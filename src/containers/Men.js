@@ -6,7 +6,7 @@ class Men extends Component {
 
     render(){
         return (
-            <div>Im a maann</div>
+            <div>Men</div>
         );
     }
 }
