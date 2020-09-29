@@ -6,10 +6,14 @@ const dropdown = (props) => {
 
     for(let key in props.data){
         content.push(
-            <div className='Section'>
+            <div 
+                key={Math.random()} 
+                className='Section'
+                onMouseEnter={(e) => { props.dropDisplay(e) }}
+                onMouseLeave={props.dropHide}>
                 <h4>{ key }</h4>
                 <ul>
-                    { props.data[key].map(item => <li>{ item }</li> )}
+                    { props.data[key].map(item => <li key={Math.random()}>{ item }</li> )}
                 </ul>
             </div>
         );
@@ -17,7 +21,7 @@ const dropdown = (props) => {
 
     return (
         <div className='Dropdown'>
-            { content.map(section => section ) }
+            {content.map(section => section )}
         </div>
     );
 }

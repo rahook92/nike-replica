@@ -20,24 +20,48 @@ class Navbar extends Component {
                 categories: {
                     "New & Featured" : ["Best Sellers", "Best of Air Max", "Fall Must Haves", "New Nike Underwear", "High Intensity", "Sale"],
                     "Shoes" : ["Lifestyle", "Running", "Basketball", "Jordan", "Training & Gym", "Soccer", "Golf", "Track & Field", "Skateboarding", "Tennis", "Baseball", "All Shoes"],
-                    "Clothing" : ["Tops & T-Shirts", "Shorts", "Hoodies & Sweatshirts", "Pants & Tights", "Jackets & Vests", "Swimwear", "Polos", "Polos", "Nike Pro", "Yoga", "Socks & Underwear", "All Clothing"]
+                    "Clothing" : ["Tops & T-Shirts", "Shorts", "Hoodies & Sweatshirts", "Pants & Tights", "Jackets & Vests", "Swimwear", "Polos", "Polos", "Nike Pro", "Yoga", "Socks & Underwear", "All Clothing"],
+                    "Shop Collection" : ["Golf", "Jordan", "Soccer", "Running", "Basketball", "Tennis", "NikeLab", "Training & Gym", "Football", "Baseball", "Nike Sportswear", "Skateboarding", "Lacrosse"]
                 }
             },
             {
                 pageName: 'Women',
-                categories: []
+                categories: {
+                    "New & Featured" : ["New Releases", "Best Sellers", "Best Of Air Max Shoes", "Fall Style Guide", "Nike Maternity", "Sale"],
+                    "Shoes" : ["Lifestyle", "Running", "Basketball", "Jordan", "Training & Gym", "Soccer", "Golf", "Track & Field", "Skateboarding", "Tennis", "Softball", "All Shoes"],
+                    "Clothing": ["Pants & Leggins", "Sports Bras", "Tops & T-Shirts", "Shorts", "Hoodies & Sweatshirts", "Jackets & Vests", "Swimwear", "Nike Pro", "Plus Size", "Nike Maternity", "Yoga", "All Clothing"],
+                    "Shop Collection": ["Golf", "Jordan", "Soccer", "Running", "Basketball", "Tennis", "NikeLab", "Training & Gym", "Football", "Softball", "Nike Sportswear", "Skateboarding", "Lacrosse"]
+                }
             },
             {
                 pageName: 'Kids',
-                categories: []
+                categories: {
+                    "New & Featured" : ["New Releases", "Best Sellers", "Best Of Air Max Shoes", "Fall Favorites", "Gear Up For Sport", "Sale"],
+                    "Boys Shoes" : ["Big Kids (3.5Y - 7Y)", "Little Kids (10.5C -3Y)", "Baby & Toddler (0C -10C)", "Lifestyle", "Running", "Basketball", "All Shoes"],
+                    "Girls Shoes" : ["Big Kids (3.5Y - 7Y)", "Little Kids (10.5C -3Y)", "Baby & Toddler (0C -10C)", "Lifestyle", "Running", "Basketball", "All Shoes"],
+                    "Baby & Toddler" : ["Baby Girl", "Baby Boy", "All Shoes", "All Shoes", "All Baby Shoes", "All Clothing", "Baby Box Sets", "All Shoes (0C - 10C)", "Boys Clothing (0M - 4T)", "Girls Clothing (0M - 4T)"],
+                    "Boys Clothing": ["Big Kids (XS - XL)", "Little Kids (4-7)", "Baby & Toddler (0M -4T)", "Hoodies & Sweatshirts", "Pants & Tights", "Jackets", "Tops & T-Shirts", "Nike Pro & Baselayer", "Shorts", "All Clothing"],
+                    "Girls Clothing" : ["Big Kids (XS - XL)", "Little Kids (4-7)", "Baby & Toddler (0M -4T)", "Hoodies & Sweatshirts", "Pants & Tights", "Jackets", "Tops & T-Shirts", "Sports Bras", "Shorts", "All Clothing"],
+                    "Accessories & Equipment" : ["Bags & Backpacks", "Hats", "Socks"],
+                    "Shop Collection" : ["Rep Your City", "Nike Adventure Club", "Sandals & Slides", "Surf & Swimwear"]
+                }
             },
             {
                 pageName: 'Customize',
-                categories: []
+                categories: {
+                    "New & Featured" : ["Customize With Nike By You", "Nike By You New Releases", "Basketball By You", "Blazer By You", "Air Max By You"],
+                    "Mens" : ["Basketball", "Lifestyle", "Football", "Running", "Training & Gym", "Soccer", "Baseball", "Skateboarding"],
+                    "Womens" : ["Lifestyle", "Running", "Training & Gym", "Basketball", "Soccer", "Softball", "Skateboarding"]
+                }
             },
             {
                 pageName: 'Sale',
-                categories: []
+                categories: {
+                    "Sale - Up To 40% Off" : [],
+                    "Mens Sale" : ["Shoes", "Clothing", "Equipment"],
+                    "Womens Sale" : ["Shoes", "Clothing", "Equipment"],
+                    "Kids Sale" : ["Shoes", "Clothing", "Equipment"]
+                }
             }           
         ],
         dropdownVisibility: {
@@ -48,31 +72,31 @@ class Navbar extends Component {
 
     displayDropdown = (event, page) => {
 
-        this.setState({
-            dropdownVisibility: {
-            isDropdownVisible: true,
-            dropdownContent: page.categories
-            }
-        });
-        // let dropdown = document.querySelector('.Dropdown');
-        // // reveal drop-down menu
-        // dropdown.style.animation = 'expand .1s forwards';
-        // dropdown.classList.add('isVisible');
-        // //populate drop-down with data
-        // this.populateDropdown(page.categories);
+        console.log(event.target);
+
+        if(event.target.classList.contains('Links')){
+            this.setState({
+                dropdownVisibility: {
+                isDropdownVisible: true,
+                dropdownContent: page.categories
+                }
+            });
+        } else {
+            this.setState({
+                dropdownVisibility: {
+                isDropdownVisible: true,
+                dropdownContent: this.state.dropdownVisibility.dropdownContent
+                }
+            });            
+        }
     };
 
     hideDropdown = () => {
         this.setState({
             dropdownVisibility: {
-                isDropdownVisible: false,
-                dropdownContent: null
+                isDropdownVisible: false
             }
         });
-        // let dropdown = document.querySelector('.Dropdown');
-
-        // dropdown.style.animation = "contract .1s linear";
-        // dropdown.classList.remove('isVisible');
     }
 
     render(){
@@ -96,7 +120,11 @@ class Navbar extends Component {
                 </nav>
                 {
                     this.state.dropdownVisibility.isDropdownVisible === true ? 
-                    <Dropdown className='Dropdown' data={this.state.dropdownVisibility.dropdownContent} /> : 
+                    <Dropdown 
+                        className='Dropdown'
+                        dropDisplay={this.displayDropdown} 
+                        dropHide={this.hideDropdown} 
+                        data={this.state.dropdownVisibility.dropdownContent} /> : 
                     null }
             </React.Fragment>
         );
