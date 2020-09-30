@@ -8,6 +8,7 @@ import Women from './Women';
 import Kids from './Kids';
 import Customize from './Customize';
 import Sale from './Sale';
+import Footer from '../components/Footer/Footer';
 
 class Home extends Component {
 
@@ -24,6 +25,7 @@ class Home extends Component {
                 <Route path="/Kids" exact component={Kids} />
                 <Route path="/Customize" exact component={Customize} />
                 <Route path="/Sale" exact component={Sale} />
+                <Footer />
             </div>
         );
     }

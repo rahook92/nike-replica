@@ -17,20 +17,35 @@
 
 .Dropdown {
     margin-top: 2px;
-    background-color: lightgrey;
+    background-color: white;
     position: absolute;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    z-index: 2;
     // box-sizing: border-box;
     .Section {
         padding: 20px 35px;
         width: 10%;
+        .section-header {
+            font-weight: 700;
+            color: black;
+        }
         ul {
             list-style: none;
             padding: 0;
+           .section-item {
+                color: darkgrey;
+                &:hover {
+                    color: black;
+                }
+           } 
+        }
+        a {
+            display: block;
+            text-decoration: none;
         }
     }
 }

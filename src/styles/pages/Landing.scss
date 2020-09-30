@@ -1,5 +1,5 @@
 .Landing {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     .section-container {
         margin: 5%;
@@ -7,7 +7,7 @@
         font-size: 30px;
         margin: 0 0 2% 0;
         }
-        .image {
+        .promo-image {
             background-image: url('../../assets/images/sneaker-1.jpg');
             background-size: 100%;
             background-position: center;
@@ -28,18 +28,7 @@
                     margin: 3% 0 0 0;
                 }
                 button {
-                    border: none;
-                    color: white;
-                    font-size: 18px;
-                    font-weight: 300;
-                    background-color: black;
-                    padding: 8px 28px;
                     margin-top: 50px;
-                    border-radius: 20px;
-                    cursor: pointer;
-                    &:hover {
-                        opacity: .85;
-                    }
                 }
             }
         }
@@ -55,12 +44,14 @@
     }
     .sneaker-carousel {
         width: 100%;
+        overflow: scroll;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
         .sneaker-tile {
             display: flex;
             flex-direction: column;
+            padding-right: 10px;
             .sneaker-img {
                 width: 400px;
                 height: 400px;
@@ -115,3 +106,55 @@
         }
     }
 }
+
+.image-container {
+    width: 100%;
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .feat-image {
+        height: 700px;
+        width: 600px;
+        background-size: 100%;
+    }
+    .image-left {
+        background-image: url('../../assets/images/model-2.jpg');
+        p {
+            font-size: 24px;
+            margin: 20px 0 0 20px;
+            color: white;
+        }
+        button {
+            margin: 20px 0 0 20px;
+        }
+    }
+    .image-right {
+        background-image: url('../../assets/images/model-1.jpg');
+        p {
+            font-size: 24px;
+            margin: 20px 0 0 20px;
+            color: black;
+        }
+        button {
+            margin: 20px 0 0 20px;
+        }
+    }
+}
+
+.fall-image {
+    background-color: grey;
+    height: 550px;
+    width: 400px;
+}
+
+.bottom-label {
+    font-size: 20px;
+}
+
+@keyframes slide-left {
+    to {
+        transform: translateX(-410px);
+    }
+}
+

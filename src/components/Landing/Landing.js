@@ -1,15 +1,28 @@
 import React from 'react';
 
 const landing = () => {
+
+    const slider = () => {
+        let sneakerTiles = Array.from(document.querySelectorAll('.sneaker-tile'));
+
+        sneakerTiles.map( tile => {
+            if(tile.style.animation === ''){
+                tile.style.animation = 'slide-left .75s forwards';
+            } else {
+                console.log('now what?')
+            }
+            });
+    }
+
     return (
         <div className='Landing'>
             <div className='section-container'>
                 <p className='label'>Trending</p>
-                <div className='image'>
+                <div className='promo-image'>
                     <div className='promo-text'>
                         <p className='big'>STEP INTO NEW AIR</p>
                         <p className='small'>Featuring the Air Max 270 React</p>
-                        <button>Shop</button>
+                        <button className='shop-btn'>Shop</button>
                     </div>
                 </div>            
             </div>
@@ -43,7 +56,7 @@ const landing = () => {
                     </div>
                     <div className='sneaker-tile'>
                         <div className='sneaker-img'>
-                            <div className='arrow right'></div>
+                            <div onClick={slider} className='arrow right'></div>
                         </div>
                         <div className='sneaker-info'>
                             <div className='name-price'>
@@ -52,7 +65,57 @@ const landing = () => {
                             </div>
                             <p className='sub-label'>Kid's Shoe</p>
                         </div>
+                    </div>
+                    <div className='sneaker-tile'>
+                        <div className='sneaker-img'></div>
+                        <div className='sneaker-info'>
+                            <div className='name-price'>
+                                <p>Nike Air Max 270 React</p>
+                                <p className='price'>$160</p>
+                            </div>
+                            <p className='sub-label'>Women's Shoe</p>
+                        </div>
+                    </div>
+                    <div className='sneaker-tile'>
+                        <div className='sneaker-img'></div>
+                        <div className='sneaker-info'>
+                            <div className='name-price'>
+                                <p>Nike Air Max 270 React</p>
+                                <p className='price'>$160</p>
+                            </div>
+                            <p className='sub-label'>Women's Shoe</p>
+                        </div>
                     </div>                                      
+                </div>
+            </div>
+            <div className='section-container'>
+                <p className='label'>Featured</p>
+                <div className='image-container'>
+                    <div className='feat-image image-left'>
+                        <p>Style with Confidence</p>
+                        <button className='shop-btn'>Shop</button>
+                    </div>
+                    <div className='feat-image image-right'>
+                        <p>Explore Jordans</p>
+                        <button className='shop-btn'>Shop</button>
+                    </div>
+                </div>
+            </div>
+            <div className='section-container'>
+                <p className='label'>Fall Must Haves</p>
+                <div className='image-container'>
+                    <div>
+                        <div id='left' className='fall-image'></div>
+                        <p className='bottom-label'>Men's</p>
+                    </div>
+                    <div>
+                        <div id='center' className='fall-image'></div>
+                        <p className='bottom-label'>Women's</p>
+                    </div>
+                    <div>
+                        <div id='right' className='fall-image'></div>
+                        <p className='bottom-label'>Kid's</p>
+                    </div>
                 </div>
             </div>
         </div>

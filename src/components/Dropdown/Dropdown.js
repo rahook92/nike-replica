@@ -11,9 +11,9 @@ const dropdown = (props) => {
                 className='Section'
                 onMouseEnter={(e) => { props.dropDisplay(e) }}
                 onMouseLeave={props.dropHide}>
-                <h4>{ key }</h4>
+                <a className='section-header' href='/'>{ key }</a>
                 <ul>
-                    { props.data[key].map(item => <li key={Math.random()}>{ item }</li> )}
+                    { props.data[key].map(item => <a className='section-item' href='/' key={Math.random()}>{ item }</a> )}
                 </ul>
             </div>
         );
