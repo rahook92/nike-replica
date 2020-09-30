@@ -1,3 +1,10 @@
+.App {
+    max-width: 100vw;
+}
+
 /// Elements
 @import './styles/elements/dropdown.scss';
 @import './styles/elements/navbar.scss';
+
+//Pages
+@import './styles/pages/Landing.scss';

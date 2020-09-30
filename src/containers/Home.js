@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Route } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
+import Landing from '../components/Landing/Landing';
 import NewRel from './NewReleases';
 import Men from './Men';
 import Women from './Women';
@@ -8,14 +9,15 @@ import Kids from './Kids';
 import Customize from './Customize';
 import Sale from './Sale';
 
-class Landing extends Component {
+class Home extends Component {
 
     state = {};
 
     render(){
         return (
-            <div className='Landing-Page'>
+            <div className='Home-Page'>
                 <Navbar />
+                <Route path='/' exact component={Landing} />
                 <Route path="/New-Releases" exact component={NewRel} />
                 <Route path="/Men" exact component={Men} />
                 <Route path="/Women" exact component={Women} />
@@ -27,4 +29,4 @@ class Landing extends Component {
     }
 }
 
-export default Landing;
+export default Home;

@@ -72,8 +72,6 @@ class Navbar extends Component {
 
     displayDropdown = (event, page) => {
 
-        console.log(event.target);
-
         if(event.target.classList.contains('Links')){
             this.setState({
                 dropdownVisibility: {

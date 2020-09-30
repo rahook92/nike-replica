@@ -1,13 +1,13 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import Landing from './containers/Landing.js';
+import Home from './containers/Home.js';
 import './App.scss';
 
 function App() {
   return (
     <BrowserRouter>
     <div className="App">
-      <Landing />
+      <Home />
     </div>
     </BrowserRouter>
   );
