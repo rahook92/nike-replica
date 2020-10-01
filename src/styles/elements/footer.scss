@@ -18,11 +18,17 @@
             height: 100%;
             width: 22%;
             margin-left: 10px;
-            p {
+            a {
+                text-decoration: none;
+                display: block;
+                margin: 14px 0;
                 color: white;
                 font-size: 14px;
             }
             .bold {
+                text-decoration: none;
+                display: block;
+                margin: 14px 0;
                 font-size: 14px;
                 font-weight: 700;
                 color: white;

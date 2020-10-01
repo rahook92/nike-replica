@@ -6,31 +6,31 @@ const footer = () => {
             <div className='footer-container'>
                 <div className='footer-section-container'>
                     <div className='footer-section'>
-                        <p className='bold'>GIFT CARDS</p>
-                        <p className='bold'>PROMOTIONS</p>
-                        <p className='bold'>FIND A STORE</p>
-                        <p className='bold'>SIGN UP FOR EMAIL</p>
-                        <p className='bold'>BECOME A MEMBER</p>
-                        <p className='bold'>NIKE JOURNEY</p>
-                        <p className='bold'>SEND US FEEDBACK</p>
+                        <a href='/' className='bold'>GIFT CARDS</a>
+                        <a href='/' className='bold'>PROMOTIONS</a>
+                        <a href='/' className='bold'>FIND A STORE</a>
+                        <a href='/' className='bold'>SIGN UP FOR EMAIL</a>
+                        <a href='/' className='bold'>BECOME A MEMBER</a>
+                        <a href='/' className='bold'>NIKE JOURNEY</a>
+                        <a href='/' className='bold'>SEND US FEEDBACK</a>
                     </div>
                     <div className='footer-section'>
-                        <p className='bold'>GET HELP</p>
-                        <p>Order Status</p>
-                        <p>Shipping and Delivery</p>
-                        <p>Returns</p>
-                        <p>Payment Options</p>
-                        <p>Gift Card Balance</p>
-                        <p>Contact Us</p>
+                        <a href='/' className='bold'>GET HELP</a>
+                        <a href='/'>Order Status</a>
+                        <a href='/'>Shipping and Delivery</a>
+                        <a href='/'>Returns</a>
+                        <a href='/'>Payment Options</a>
+                        <a href='/'>Gift Card Balance</a>
+                        <a href='/'>Contact Us</a>
                     </div>
                     <div className='footer-section'>
-                        <p className='bold'>ABOUT NIKE</p>
-                        <p>News</p>
-                        <p>Careers</p>
-                        <p>Investors</p>
-                        <p>Purpose</p>
-                        <p>Sustainability</p>
-                        <p>CA Supply Chains Act</p>                
+                        <a href='/' className='bold'>ABOUT NIKE</a>
+                        <a href='/'>News</a>
+                        <a href='/'>Careers</a>
+                        <a href='/'>Investors</a>
+                        <a href='/'>Purpose</a>
+                        <a href='/'>Sustainability</a>
+                        <a href='/'>CA Supply Chains Act</a>                
                     </div>
                 </div>
                 <ul className='social-links'>

@@ -1,5 +1,4 @@
 .Landing {
-    height: 100%;
     width: 100vw;
     .section-container {
         margin: 5%;
@@ -44,14 +43,14 @@
     }
     .sneaker-carousel {
         width: 100%;
-        overflow: scroll;
+        overflow-x: scroll;
+        scrollbar-width: thin;
         display: flex;
         flex-direction: row;
-        // justify-content: space-between;
         .sneaker-tile {
             display: flex;
             flex-direction: column;
-            padding-right: 10px;
+            padding: 0 10px 20px 0;
             .sneaker-img {
                 width: 400px;
                 height: 400px;
