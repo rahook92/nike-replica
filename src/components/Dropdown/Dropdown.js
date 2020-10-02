@@ -13,7 +13,7 @@ const dropdown = (props) => {
                 onMouseLeave={props.dropHide}>
                 <a className='section-header' href='/'>{ key }</a>
                 <ul>
-                    { props.data[key].map(item => <a className='section-item' href='/' key={Math.random()}>{ item }</a> )}
+                    { props.data[key].map(item => <a className='section-item' href='/Products' key={Math.random()}>{ item }</a> )}
                 </ul>
             </div>
         );

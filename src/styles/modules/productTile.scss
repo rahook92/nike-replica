@@ -3,7 +3,7 @@
     flex-direction: column;
     padding: 0 10px 20px 0;
     width: 30%;
-    height: 450px;
+    height: 500px;
     margin-bottom: 40px;
 }
 .product-img {
@@ -12,6 +12,7 @@
     background-color: lightgrey;
     background-image: url('../../assets/images/sneaker-tile.webp');
     background-size: cover;
+    background-position: center;
     cursor: pointer;
     &:hover {
         opacity: 0.90;

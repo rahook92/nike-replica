@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ProductTile from '../components/ProductTile/ProductTile';
 import FilterMenu from '../components/FilterMenu/FilterMenu';
+import ProductsNav from '../components/ProductsNav/ProductsNav';
 
 class Products extends Component {
 
@@ -108,21 +109,7 @@ class Products extends Component {
     render(){
         return (
             <div className='ProductPage'>
-                <div className='product-nav section-container'>
-                    <div className='productPage-label label'>Products</div>
-                    <div className='nav-options'>
-                        <button onClick={this.displayFilterMenu} className='nav-option nav-filter'>Show Filters</button>
-                        <div className='sort-dropdown'>
-                            <button className="nav-option nav-sort">Sort By</button>
-                            <div className="sort-content">
-                                <button className='sort-btn'>Featured</button>
-                                <button className='sort-btn'>Newest</button>
-                                <button className='sort-btn'>Price: Low-High</button>
-                                <button className='sort-btn'>Price: High-Low</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <ProductsNav areFiltersVisible={this.state.filterMenuVisible} displayFilterMenu={this.displayFilterMenu} />
                 <div className='products-filter-container'>
                     { this.state.filterMenuVisible === true ? <FilterMenu /> : null }
                     <div className='products-container'>

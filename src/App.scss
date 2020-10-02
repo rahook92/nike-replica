@@ -5,12 +5,15 @@
 
 /// Elements
 @import './styles/elements/dropdown.scss';
-@import './styles/elements/navbar.scss';
-@import './styles/elements/footer.scss';
 @import './styles/elements/button.scss';
-@import './styles/elements/filterMenu.scss';
-@import './styles/elements/productTile.scss';
+@import './styles/elements/filterBtn.scss';
 
-//Pages
+/// Modules
+@import './styles/modules/navbar.scss';
+@import './styles/modules/footer.scss';
+@import './styles/modules/productTile.scss';
+@import './styles/modules/filterMenu.scss';
+
+/// Pages
 @import './styles/pages/Landing.scss';
 @import './styles/pages/Products.scss';
