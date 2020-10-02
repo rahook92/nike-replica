@@ -41,68 +41,68 @@
             color: black;
         }
     }
+
+            // .sneaker-tile {
+            //     display: flex;
+            //     flex-direction: column;
+            //     padding: 0 10px 20px 0;
+            // }
+            // .sneaker-img {
+            //     width: 400px;
+            //     height: 400px;
+            //     background-color: lightgrey;
+            //     background-image: url('../../assets/images/sneaker-tile.webp');
+            //     background-size: cover;
+            //     cursor: pointer;
+            //     &:hover {
+            //         opacity: 0.90;
+            //         .arrow {
+            //             display: block;
+            //         }
+            //     }
+            // }
+            //     .arrow {
+            //         display: none;
+            //         width: 40px;
+            //         height: 40px;
+            //         border-radius: 20px;
+            //         background-color: grey;
+            //         position: relative;
+            //         z-index: 2;
+            //         top: 175px;
+            //         cursor: pointer;
+            //     }
+            //     .right {
+            //         left: 85%;
+            //     }
+            //     .left {
+            //         left: 5%;            
+            //     }
+            // .sneaker-info {
+            //     display: flex;
+            //     flex-direction: column;
+            //     p {
+            //         margin: 0;
+            //     }
+            // }
+            //     .name-price {
+            //         display: flex;
+            //         flex-direction: row;
+            //         justify-content: space-between;
+            //         margin-top: 10px;
+            //         .price {
+            //             margin-right: 15px;
+            //         }
+            //     }
+            //     .sub-label {
+            //         color: darkgrey;
+            //     }  
     .sneaker-carousel {
         width: 100%;
         overflow-x: scroll;
         scrollbar-width: thin;
         display: flex;
-        flex-direction: row;
-        .sneaker-tile {
-            display: flex;
-            flex-direction: column;
-            padding: 0 10px 20px 0;
-            .sneaker-img {
-                width: 400px;
-                height: 400px;
-                background-color: lightgrey;
-                background-image: url('../../assets/images/sneaker-tile.webp');
-                background-size: cover;
-                cursor: pointer;
-                .arrow {
-                    display: none;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 20px;
-                    background-color: grey;
-                    position: relative;
-                    z-index: 2;
-                    top: 175px;
-                    cursor: pointer;
-                }
-                .right {
-                    left: 85%;
-                }
-                .left {
-                    left: 5%;            
-                }
-
-                &:hover {
-                    opacity: 0.90;
-                    .arrow {
-                        display: block;
-                    }
-                }
-            }
-            .sneaker-info {
-                display: flex;
-                flex-direction: column;
-                p {
-                    margin: 0;
-                }
-                .name-price {
-                    display: flex;
-                    flex-direction: row;
-                    justify-content: space-between;
-                    margin-top: 10px;
-                    .price {
-                        margin-right: 15px;
-                    }
-                }
-                .sub-label {
-                    color: darkgrey;
-                }
-            }            
-        }
+        flex-direction: row;          
     }
 }
 

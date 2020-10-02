@@ -1,18 +1,19 @@
 import React from 'react';
+import ProductTile from '../ProductTile/ProductTile';
 
 const landing = () => {
 
-    const slider = () => {
-        let sneakerTiles = Array.from(document.querySelectorAll('.sneaker-tile'));
+    // const slider = () => {
+    //     let sneakerTiles = Array.from(document.querySelectorAll('.sneaker-tile'));
 
-        sneakerTiles.map( tile => {
-            if(tile.style.animation === ''){
-                tile.style.animation = 'slide-left .75s forwards';
-            } else {
-                console.log('now what?')
-            }
-            });
-    }
+    //     sneakerTiles.map( tile => {
+    //         if(tile.style.animation === ''){
+    //             tile.style.animation = 'slide-left .75s forwards';
+    //         } else {
+    //             console.log('now what?')
+    //         }
+    //         });
+    // }
 
     return (
         <div className='Landing'>
@@ -32,60 +33,11 @@ const landing = () => {
                     <a href='/'>Shop All</a>
                 </div>
                 <div className='sneaker-carousel'>
-                    <div className='sneaker-tile'>
-                        <div className='sneaker-img'>
-                            <div className='arrow left'></div>
-                        </div>
-                        <div className='sneaker-info'>
-                            <div className='name-price'>
-                                <p>Nike Air Max 270 React</p>
-                                <p className='price'>$160</p>
-                            </div>
-                            <p className='sub-label'>Men's Shoe</p>
-                        </div>
-                    </div>
-                    <div className='sneaker-tile'>
-                        <div className='sneaker-img'></div>
-                        <div className='sneaker-info'>
-                            <div className='name-price'>
-                                <p>Nike Air Max 270 React</p>
-                                <p className='price'>$160</p>
-                            </div>
-                            <p className='sub-label'>Women's Shoe</p>
-                        </div>
-                    </div>
-                    <div className='sneaker-tile'>
-                        <div className='sneaker-img'>
-                            <div onClick={slider} className='arrow right'></div>
-                        </div>
-                        <div className='sneaker-info'>
-                            <div className='name-price'>
-                                <p>Nike Air Max 270 React</p>
-                                <p className='price'>$125</p>
-                            </div>
-                            <p className='sub-label'>Kid's Shoe</p>
-                        </div>
-                    </div>
-                    <div className='sneaker-tile'>
-                        <div className='sneaker-img'></div>
-                        <div className='sneaker-info'>
-                            <div className='name-price'>
-                                <p>Nike Air Max 270 React</p>
-                                <p className='price'>$160</p>
-                            </div>
-                            <p className='sub-label'>Women's Shoe</p>
-                        </div>
-                    </div>
-                    <div className='sneaker-tile'>
-                        <div className='sneaker-img'></div>
-                        <div className='sneaker-info'>
-                            <div className='name-price'>
-                                <p>Nike Air Max 270 React</p>
-                                <p className='price'>$160</p>
-                            </div>
-                            <p className='sub-label'>Women's Shoe</p>
-                        </div>
-                    </div>                                      
+                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
+                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
+                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
+                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
+                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
                 </div>
             </div>
             <div className='section-container'>

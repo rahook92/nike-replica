@@ -1,5 +1,6 @@
-.App {
+.App, .Home-Page {
     max-width: 100vw;
+    overflow-x: hidden;
 }
 
 /// Elements
@@ -7,6 +8,8 @@
 @import './styles/elements/navbar.scss';
 @import './styles/elements/footer.scss';
 @import './styles/elements/button.scss';
+@import './styles/elements/filterMenu.scss';
+@import './styles/elements/productTile.scss';
 
 //Pages
 @import './styles/pages/Landing.scss';
