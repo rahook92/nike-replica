@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import Navbar from '../components/Navbar/Navbar';
 import Landing from '../components/Landing/Landing';
 import Products from './Products';
+import ProductPage from './ProductPage';
 import Footer from '../components/Footer/Footer';
 
 class Home extends Component {
@@ -21,6 +22,7 @@ class Home extends Component {
                 <Route path="/Customize" exact component={Landing} />
                 <Route path="/Sale" exact component={Landing} />
                 <Route path="/Products" exact component={Products} />
+                <Route path="/product-page" exact component={ProductPage} />
                 <Footer />
             </div>
         );

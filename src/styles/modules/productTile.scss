@@ -8,11 +8,7 @@
 }
 .product-img {
     width: 100%;
-    height: 75%;
     background-color: lightgrey;
-    background-image: url('../../assets/images/sneaker-tile.webp');
-    background-size: cover;
-    background-position: center;
     cursor: pointer;
     &:hover {
         opacity: 0.90;
@@ -50,5 +46,11 @@
     }
     p {
         margin: 4px;
+    }
+}
+
+.product-name {
+    &:hover {
+        color: darkblue;
     }
 }

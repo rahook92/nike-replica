@@ -1,0 +1,13 @@
+.product-carousel {
+    width: 100%;
+    overflow-x: scroll;
+    scrollbar-width: thin;
+    display: flex;
+    flex-direction: row;  
+    .product-tile {
+        margin-right: 40px;
+    }
+    .product-img {
+        width: 400px;
+    }      
+}

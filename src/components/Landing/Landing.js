@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductTile from '../ProductTile/ProductTile';
+import ProductCarousel from '../ProductCarousel/ProductCarousel';
 
 const landing = () => {
 
@@ -32,13 +32,7 @@ const landing = () => {
                     <p className='label'>Best of Air Max</p>
                     <a href='/'>Shop All</a>
                 </div>
-                <div className='sneaker-carousel'>
-                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
-                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
-                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
-                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
-                    <ProductTile type='Sneaker' name='Nike Air Max 270 React' gender='Men' price='$240' colors={['red', 'yellow']} />
-                </div>
+                <ProductCarousel />
             </div>
             <div className='section-container'>
                 <p className='label'>Featured</p>
