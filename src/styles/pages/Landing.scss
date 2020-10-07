@@ -1,92 +1,24 @@
-.Landing {
+.Media-Page-Container {
     width: 100vw;
-    .section-container {
-        margin: 5%;
-        .label {
-        font-size: 30px;
-        margin: 0 0 2% 0;
-        }
-        .promo-image {
-            background-image: url('../../assets/images/sneaker-1.jpg');
-            background-size: 100%;
-            background-position: center;
-            height: 600px;
-            width: 100%;
-            .promo-text {
-                position: relative;
-                width: 30%;
-                top: 60%;
-                margin-left: 30px;
-                .big {
-                    font-size: 50px;
-                    font-weight: 700;
-                    margin: 0;
-                    line-height: 95%;
-                }
-                .small {
-                    margin: 3% 0 0 0;
-                }
-                button {
-                    margin-top: 50px;
-                }
-            }
-        }
-    }
-    .label-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        a {
-            text-decoration: none;
-            color: black;
-        }
-    }
 }
 
+.section-container {
+    margin: 5%;
+}
 
-.image-container {
-    width: 100%;
-    height: 750px;
+.label-lrg {
+    font-size: 30px;
+    margin: 0 0 2% 0;
+}
+
+.label-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .feat-image {
-        height: 700px;
-        width: 600px;
-        background-size: 100%;
+    a {
+        text-decoration: none;
+        color: black;
     }
-    .image-left {
-        background-image: url('../../assets/images/model-2.jpg');
-        p {
-            font-size: 24px;
-            margin: 20px 0 0 20px;
-            color: white;
-        }
-        button {
-            margin: 20px 0 0 20px;
-        }
-    }
-    .image-right {
-        background-image: url('../../assets/images/model-1.jpg');
-        p {
-            font-size: 24px;
-            margin: 20px 0 0 20px;
-            color: black;
-        }
-        button {
-            margin: 20px 0 0 20px;
-        }
-    }
-}
-
-.fall-image {
-    background-color: grey;
-    height: 550px;
-    width: 400px;
-}
-
-.bottom-label {
-    font-size: 20px;
 }
 
 @keyframes slide-left {

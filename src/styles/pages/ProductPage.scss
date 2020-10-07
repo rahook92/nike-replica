@@ -6,10 +6,10 @@
     margin-top: 50px;
     padding: 0 20px;
     box-sizing: border-box;
-    .product-carousel {
-        margin: 0 0 100px 2.5%;
-    }
 }
+    // .product-carousel {
+    //     margin: 0 0 100px 2.5%;
+    // }
 
 .product-snapshots-container {
     width: 70%;
@@ -149,3 +149,23 @@
     font-size: 16px;
     font-weight: 700;
 }
+
+.shipping-returns-container {
+    padding: 10px;
+    margin-top: 50px;
+    p:nth-child(1) {
+        font-size: 20px;
+        margin-bottom: 30px;
+        font-weight: 550;
+    }
+    p:nth-child(3){
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+.carousel-container {
+    width: 100%;
+}
+
+

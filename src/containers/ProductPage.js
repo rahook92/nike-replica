@@ -69,9 +69,16 @@ render(){
                         <li>Shown: Heather Grey</li>
                         <li>Style: CW1777-008</li>
                     </ul>
+                    <div className='shipping-returns-container'>
+                        <p className='shipping-returns'>Free Shipping &amp; Returns</p>
+                        <p>Free standard shipping and free 60-day returns for Nike Members.</p>
+                        <p className='learn'>Learn More</p>
+                    </div>
                 </div>
                 <div className='you-might-like'>YOU MIGHT ALSO LIKE</div>
+                <div className='carousel-container'>
                 <ProductCarousel />
+                </div>
             </div>
         );
     }

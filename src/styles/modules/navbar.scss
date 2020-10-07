@@ -7,10 +7,10 @@
     justify-content: space-evenly;
     margin-top: 20px;
     .Logo {
-        width: 75px;
-        height: 40px;
+        object-fit: cover;
+        width: 100px;
+        height: 90px;
         display: block;
-        background-color: darkgrey;
         text-align: center;
         padding: 8px 0 0 0;
         box-sizing: border-box;
@@ -22,20 +22,6 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: row;
-        .Links {
-            text-decoration: none;
-            font-size: 16px;
-            display: block;
-            height: 100%;
-            margin-left: 30px;
-            &:visited {
-                color: black;
-            }
-            &:hover {
-                border-bottom: 2px solid black;
-                cursor: pointer
-            }
-        }
     }
     .Search-Bar {
         width: 150px;
@@ -46,15 +32,56 @@
     }
     .Nav-Icons {
         width: 120px;
-        height: 40px;
-        .Favorite-Icon, .Shopping-Bag-Icon {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background-color: lightgrey;
+        height: 28px;
+        svg {
+            border-radius: 8px;
+            cursor: pointer;
+            &:hover {
+                background-color: lightgrey;
+            }
         }
         .Shopping-Bag-Icon {
             margin-left: 25px;
         }
     }
 }
+
+        .NavLinks {
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            height: 100%;
+            margin-left: 30px;
+            outline: none;
+            &:visited {
+                color: black;
+            }
+            &:hover {
+                border-bottom: 2px solid black;
+                cursor: pointer
+            }
+        }
+
+        .Links {
+            text-decoration: none;
+            &:visited {
+                color: black;
+            }
+        }
+
+.Search-Button {
+    margin: 0;
+    border-radius: 40px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    &:hover {
+        background-color: grey;
+    }
+}
+
+.logo-link {
+    outline: none;
+}
+

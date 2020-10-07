@@ -1,7 +1,15 @@
 import React from 'react';
 import ProductCarousel from '../ProductCarousel/ProductCarousel';
+import Hero from '../Hero/Hero';
+import MediaPanel from '../MediaPanel';
+import sneaker1 from '../../assets/images/sneaker-hero.jpg';
+import jordanModel from '../../assets/images/jordan-female-model.jpg';
+import escalatorModel from '../../assets/images/escalator-model.jpg';
+import womanProductModel from '../../assets/images/product-female-model.webp';
+import maleModel1 from '../../assets/images/product-model-male.webp';
+import kidModel from '../../assets/images/product-model-kid.webp';
 
-const landing = () => {
+const Landing = () => {
 
     // const slider = () => {
     //     let sneakerTiles = Array.from(document.querySelectorAll('.sneaker-tile'));
@@ -16,56 +24,47 @@ const landing = () => {
     // }
 
     return (
-        <div className='Landing'>
-            <div className='section-container'>
-                <p className='label'>Trending</p>
-                <div className='promo-image'>
-                    <div className='promo-text'>
-                        <p className='big'>STEP INTO NEW AIR</p>
-                        <p className='small'>Featuring the Air Max 270 React</p>
-                        <button className='shop-btn'>Shop</button>
-                    </div>
-                </div>            
-            </div>
-            <div className='section-container'>
-                <div className='label-container'>
-                    <p className='label'>Best of Air Max</p>
-                    <a href='/'>Shop All</a>
-                </div>
-                <ProductCarousel />
-            </div>
-            <div className='section-container'>
-                <p className='label'>Featured</p>
-                <div className='image-container'>
-                    <div className='feat-image image-left'>
-                        <p>Style with Confidence</p>
-                        <button className='shop-btn'>Shop</button>
-                    </div>
-                    <div className='feat-image image-right'>
-                        <p>Explore Jordans</p>
-                        <button className='shop-btn'>Shop</button>
-                    </div>
-                </div>
-            </div>
-            <div className='section-container'>
-                <p className='label'>Fall Must Haves</p>
-                <div className='image-container'>
-                    <div>
-                        <div id='left' className='fall-image'></div>
-                        <p className='bottom-label'>Men's</p>
-                    </div>
-                    <div>
-                        <div id='center' className='fall-image'></div>
-                        <p className='bottom-label'>Women's</p>
-                    </div>
-                    <div>
-                        <div id='right' className='fall-image'></div>
-                        <p className='bottom-label'>Kid's</p>
-                    </div>
-                </div>
-            </div>
+        <div className='Media-Page-Container'>
+            <Hero image={sneaker1} label='Trending' heroText={{text: 'STEP INTO NEW AIR', textColor: 'black', position: 'hero-bottom-left'}} />    
+            <ProductCarousel label='The Best of Air-Max' />
+            <MediaPanel
+                containerSize='lrg' 
+                label='Featured'
+                images={[ 
+                    {   
+                        imageSrc: escalatorModel, 
+                        overlayItems:   <div className='top-left'> 
+                                            <p style={{ color: 'white' }}>Style with Confidence</p>
+                                            <button className='shop-btn'>Shop</button>
+                                        </div>
+                    }, 
+                    {   
+                        imageSrc: jordanModel, 
+                        overlayItems:   <div className='top-left'> 
+                                            <p style={{ color: 'black' }}>Explore Jordans</p>
+                                            <button className='shop-btn'>Shop</button>
+                                        </div>
+                    }   
+                ]} />
+            <MediaPanel 
+                containerSize='med'
+                label='New Releases'
+                images={[
+                    {
+                        imageSrc: womanProductModel,
+                        label: "Women's"
+                    },
+                    {
+                        imageSrc: maleModel1,
+                        label: "Men's"
+                    },
+                    {
+                        imageSrc: kidModel,
+                        label: "Kid's"
+                    }
+                ]} />
         </div>
     );
 }
 
-export default landing;
+export default Landing;
