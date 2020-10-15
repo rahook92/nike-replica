@@ -208,3 +208,44 @@
         }
     }
 }
+@media (max-width: 900px){
+    .product-snapshots-container {
+        width: 100%;
+        height: 175vh;
+        margin-bottom: 50px;
+    }
+    .product-size-btn {
+        width: 48%;
+    }
+}
+@media (max-width: 800px){
+    .product-snapshots-container {
+        width: 100%;
+        height: 150vh;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 700px){
+    .product-snapshots-container {
+        width: 100%;
+        height: 125vh;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 600px){
+    .product-snapshots-container {
+        width: 100%;
+        height: 100vh;
+        margin-bottom: 50px;
+    }
+}
+@media (max-width: 500px){
+    .product-snapshots-container {
+        width: 100%;
+        height: 90vh;
+        margin-bottom: 50px;
+    }
+    .product-size-btn {
+        width: 47%;
+    }
+}

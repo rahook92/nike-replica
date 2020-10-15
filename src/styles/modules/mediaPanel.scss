@@ -83,4 +83,13 @@ img {
             margin-bottom: 10px;
         }
     }
+    .media-container-med {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .Links {
+            width: 100%;
+        }
+    }
 }

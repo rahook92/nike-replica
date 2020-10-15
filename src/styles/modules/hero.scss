@@ -47,3 +47,21 @@ img {
         }
     }
 }
+@media(max-width: 700px){
+    .hero-image-container {
+        height: 350px;
+    }
+    .promo-text {
+        width: 200px;
+        .big {
+            font-size: 26px;
+        }
+        button {
+            margin-top: 10px;
+        }
+    }
+    .hero-bottom-left {
+        top: 225px;
+        left: 20px;
+    }
+}
