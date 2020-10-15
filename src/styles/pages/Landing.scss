@@ -27,3 +27,15 @@
     }
 }
 
+@media(max-width: 500px) {
+    .label-lrg {
+        font-size: 20px;
+    }
+    .label-container {
+        a {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+}
+
