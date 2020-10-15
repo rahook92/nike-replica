@@ -41,15 +41,15 @@ const Men = () => {
                 images={[ 
                     {   
                         imageSrc: maleModel2, 
-                        overlayItems:   <div className='top-left'> 
-                                            <p style={{ color: 'white' }}>The Latest Air Max Colors</p>
+                        overlayItems:   <div className='bottom-left'> 
+                                            <p style={{ color: 'black' }}>The Latest Air Max Colors</p>
                                             <button className='shop-btn'>Shop</button>
                                         </div>
                     }, 
                     {   
                         imageSrc: maleModel3, 
-                        overlayItems:   <div className='top-left'> 
-                                            <p style={{ color: 'black' }}>Training Gear For Fall</p>
+                        overlayItems:   <div className='bottom-left'> 
+                                            <p style={{ color: 'white' }}>Training Gear For Fall</p>
                                             <button className='shop-btn'>Shop</button>
                                         </div>
                     }   

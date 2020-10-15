@@ -5,7 +5,7 @@ const SecondaryFilter = (props) => {
 
     const [filterState, setFilterState] = useState({ 
             selectedFilters: [],
-            secondaryFilterMenuVisible: false 
+            secondaryFilterMenuVisible: props.windowWidth > 1000 ? false : true
         });
 
     const displayFilterMenu = () => {

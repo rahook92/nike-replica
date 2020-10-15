@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import ProductTile from '../components/ProductTile/ProductTile';
 import FilterMenu from '../components/FilterMenu/FilterMenu';
 import ProductsNav from '../components/ProductsNav/ProductsNav';
+import ProductsNavCollapsed from '../components/ProductsNav/ProductsNavCollapsed';
+import PrimaryFilter from '../components/FilterMenu/PrimaryFilter/PrimaryFilter';
 
 class Products extends Component {
 
@@ -92,8 +94,23 @@ class Products extends Component {
                 colors: ['black', 'purple']
             }
         ],
-        filterMenuVisible: false
+        filterMenuVisible: false,
+        height: window.innerHeight,
+        width: window.innerWidth
     };
+
+    componentDidMount(){
+        let handleResize = () => {
+            this.setState({
+                products: [...this.state.products],
+                filterMenuVisible: false,
+                height: window.innerHeight,
+                width: window.innerWidth
+            })
+        }
+
+        window.addEventListener('resize', handleResize);
+    }
 
     displayFilterMenu = () => {
         this.setState({
@@ -106,12 +123,26 @@ class Products extends Component {
         })
     }
 
+    primaryFilters = ['Option', 'Option', 'Option', 'Option'];
+
     render(){
         return (
             <div className='ProductPage'>
-                <ProductsNav areFiltersVisible={this.state.filterMenuVisible} displayFilterMenu={this.displayFilterMenu} />
+
+                { this.state.width > 1000 ? 
+                    <ProductsNav 
+                        areFiltersVisible={this.state.filterMenuVisible} 
+                        displayFilterMenu={this.displayFilterMenu} /> :
+                    <React.Fragment>
+                        <ProductsNavCollapsed displayFilterMenu={this.displayFilterMenu} />
+                        <div className='primary-filters'>
+                            <PrimaryFilter content={this.primaryFilters} />
+                        </div> 
+                    </React.Fragment>
+                }
+
                 <div className='products-filter-container'>
-                    { this.state.filterMenuVisible === true ? <FilterMenu /> : null }
+                    { this.state.filterMenuVisible === true ? <FilterMenu displayFilterMenu={this.displayFilterMenu} windowWidth={this.state.width} /> : null }
                     <div className='products-container'>
                         {this.state.products.map( product => <ProductTile 
                                                                 type={product.productType}

@@ -11,7 +11,7 @@ import kidsTees from '../../assets/images/kids-tees.webp';
 const Kids = () => {
     return(
         <div className='Media-Page-Container'>
-        <Hero image={kidsHero} heroText={{text: 'PLAY STARTS HERE', textColor: 'black', position: 'hero-top-left'}} />
+        <Hero image={kidsHero} heroText={{text: 'PLAY STARTS HERE', textColor: 'darkblue', position: 'hero-top-left'}} />
         <ProductCarousel label='The Most Wanted Kicks' />
         <Hero image={kidsHero2} heroText={{text: 'REVIVAL COLLECTION', textColor: 'black', position: 'hero-top-left'}} />
         <MediaPanel 

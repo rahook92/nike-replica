@@ -4,19 +4,21 @@ import SecondaryFilter from './SecondaryFilter/SecondaryFilter';
 
 const filterMenu = (props) => {
 
-    const primaryFilters = ['Option', 'Option', 'Option', 'Option', 'Option', 'Option', 'Option', 'Option']
+    const primaryFilters = ['Option', 'Option', 'Option', 'Option', 'Option', 'Option', 'Option', 'Option'];
 
     return (
         <div className='filterMenu'>
-            <div className='primary-filters'>
-                <PrimaryFilter content={primaryFilters} />
-            </div>
+            { props.windowWidth > 1000 ?    
+                <div className='primary-filters'>
+                    <PrimaryFilter content={primaryFilters} />
+                </div> : null }
             <div className='secondary-filters'>
-                <SecondaryFilter label='Gender' content={{ items: ['Men', 'Women', 'Unisex'] }} />
-                <SecondaryFilter label='Kids' content={{ items: ['Boys', 'Girls'] }} />
-                <SecondaryFilter label='Shop By Price' content={{ items: ['$0 - $25', '$25 - $50', '$50 - $100', 'Over $100'] }} />
-                <SecondaryFilter label='Color' content={{ items: ['Purple', 'Black', 'Red', 'Orange', 'Blue', 'White', 'Brown', 'Green', 'Yellow', 'Multi-Color', 'Grey', 'Pink'] }} />
-                <SecondaryFilter label='Sports &amp; Activities' content={{ items: ['Lifestyle', 'Running', 'Training & Gym', 'Yoga'] }} />
+                { props.windowWidth < 1000 ? <button className='close-btn' onClick={props.displayFilterMenu}>close</button> : null }
+                <SecondaryFilter label='Gender' windowWidth={props.windowWidth} content={{ items: ['Men', 'Women', 'Unisex'] }} />
+                <SecondaryFilter label='Kids' windowWidth={props.windowWidth} content={{ items: ['Boys', 'Girls'] }} />
+                <SecondaryFilter label='Shop By Price' windowWidth={props.windowWidth} content={{ items: ['$0 - $25', '$25 - $50', '$50 - $100', 'Over $100'] }} />
+                <SecondaryFilter label='Color' windowWidth={props.windowWidth} content={{ items: ['Purple', 'Black', 'Red', 'Orange', 'Blue', 'White', 'Brown', 'Green', 'Yellow', 'Multi-Color', 'Grey', 'Pink'] }} />
+                <SecondaryFilter label='Sports &amp; Activities' windowWidth={props.windowWidth} content={{ items: ['Lifestyle', 'Running', 'Training & Gym', 'Yoga'] }} />
             </div>
         </div>
     );  

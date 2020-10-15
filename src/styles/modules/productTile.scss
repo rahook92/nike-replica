@@ -12,28 +12,8 @@
     cursor: pointer;
     &:hover {
         opacity: 0.90;
-        // .arrow {
-        //     display: block;
-        // }
     }
 }
-// .arrow {
-//     display: none;
-//     width: 40px;
-//     height: 40px;
-//     border-radius: 20px;
-//     background-color: grey;
-//     position: relative;
-//     z-index: 2;
-//     top: 175px;
-//     cursor: pointer;
-// }
-// .right {
-//     left: 85%;
-// }
-// .left {
-//     left: 5%;            
-// }
 .product-info {
     margin-top: 10px;
     height: 25%;
@@ -54,3 +34,20 @@
         color: darkblue;
     }
 }
+@media(max-width: 1000px){
+    .product-tile {
+        width: 40%;
+    }
+}
+@media(max-width: 900px){
+    .product-tile {
+        width: 45%;
+    }
+}
+@media(max-width: 800px){
+    .product-tile {
+        width: 50%;
+        height: 425px;
+    }
+}
+

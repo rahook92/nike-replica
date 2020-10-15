@@ -1,7 +1,6 @@
 import React from 'react';
 import check from '../../../../assets/icons/checkbox-24.png';
 
-
 const secondaryFilterMenu = (props) => {
 
     return (
