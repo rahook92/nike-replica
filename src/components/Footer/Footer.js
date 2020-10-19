@@ -36,7 +36,7 @@ const footer = () => {
                 <ul className='social-links'>
                     <li className='social-link'>
                         <svg 
-                            class="social-link-icon" 
+                            className="social-link-icon" 
                             width="40px" 
                             fill="#888" 
                             height="40px" 
@@ -47,7 +47,7 @@ const footer = () => {
                     </li>
                     <li className='social-link'>
                         <svg 
-                            class="social-link-icon" 
+                            className="social-link-icon" 
                             width="40px" 
                             fill="#888" 
                             height="40px" 
@@ -58,7 +58,7 @@ const footer = () => {
                     </li>
                     <li className='social-link'>
                         <svg 
-                            class="social-link-icon" 
+                            className="social-link-icon" 
                             width="40px" 
                             fill="#888" 
                             height="40px" 
@@ -69,7 +69,7 @@ const footer = () => {
                     </li>
                     <li className='social-link'>
                         <svg 
-                            class="social-link-icon" 
+                            className="social-link-icon" 
                             width="40px" 
                             fill="#888" 
                             height="40px" 

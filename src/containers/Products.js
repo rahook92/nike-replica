@@ -144,7 +144,8 @@ class Products extends Component {
                 <div className='products-filter-container'>
                     { this.state.filterMenuVisible === true ? <FilterMenu displayFilterMenu={this.displayFilterMenu} windowWidth={this.state.width} /> : null }
                     <div className='products-container'>
-                        {this.state.products.map( product => <ProductTile 
+                        {this.state.products.map( product => <ProductTile
+                                                                key={Math.random() * 100} 
                                                                 type={product.productType}
                                                                 name={product.productName}
                                                                 gender={product.gender}

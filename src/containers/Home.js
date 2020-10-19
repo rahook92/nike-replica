@@ -26,6 +26,9 @@ class Home extends Component {
             })
         }
         window.addEventListener('resize', handleResize)
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        }
     }
 
     render(){

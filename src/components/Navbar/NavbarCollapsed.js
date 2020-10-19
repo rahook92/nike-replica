@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Dropdown from '../Dropdown/Dropdown';
 import swoosh from '../../assets/images/swoosh-logo.png';
 
 class NavbarCollapsed extends Component {

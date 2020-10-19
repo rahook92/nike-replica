@@ -8,7 +8,7 @@ const MediaPanel = (props) => {
             <div className={'media-container-' + props.containerSize + '' }>
                 { props.images.map(image => {
                     return (
-                        <Link className='Links' to='/products'>
+                        <Link key={image.imageSrc} className='Links' to='/products'>
                         <div className={'image-container-' + props.containerSize + '' }>
                             <img src={image.imageSrc} alt='models' />
                             { image.overlayItems ? image.overlayItems : null }

@@ -11,18 +11,6 @@ import kidModel from '../../assets/images/product-model-kid.webp';
 
 const Landing = () => {
 
-    // const slider = () => {
-    //     let sneakerTiles = Array.from(document.querySelectorAll('.sneaker-tile'));
-
-    //     sneakerTiles.map( tile => {
-    //         if(tile.style.animation === ''){
-    //             tile.style.animation = 'slide-left .75s forwards';
-    //         } else {
-    //             console.log('now what?')
-    //         }
-    //         });
-    // }
-
     return (
         <div className='Media-Page-Container'>
             <Hero image={sneaker1} label='Trending' heroText={{text: 'STEP INTO NEW AIR', textColor: 'black', position: 'hero-bottom-left'}} />    

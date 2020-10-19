@@ -11,7 +11,7 @@ const secondaryFilterMenu = (props) => {
 
                 props.selectedFilters.filter(x => x === item ? isChecked = {backgroundImage: `url(${check})`} : null);
 
-                return  <div className='secondary-filter-item'>
+                return  <div key={item} className='secondary-filter-item'>
                             <div 
                                 onClick={(e, filterItem) => { props.isSelected(e, item) }} 
                                 className='check-box' 

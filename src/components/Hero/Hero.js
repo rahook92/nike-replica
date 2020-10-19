@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = (props) => {
     return (
-        <Link className='Links' to='/product-page'>
+        <Link className='Links' to='/products'>
         <div className='section-container'>
             { props.label ? <p className='label-lrg'>{props.label}</p> : null }      
             <div className='hero-image-container'>
