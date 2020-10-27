@@ -1,8 +1,3 @@
-.Home-Page {
-    max-width: 1366px;
-    overflow-x: hidden;
-}
-
 /// Elements
 @import './styles/elements/dropdown.scss';
 @import './styles/elements/button.scss';
@@ -22,3 +17,10 @@
 @import './styles/pages/Landing.scss';
 @import './styles/pages/Products.scss';
 @import './styles/pages/ProductPage.scss';
+
+.App {
+    height: 100%;
+    max-width: 1366px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
