@@ -18,9 +18,8 @@
 @import './styles/pages/Products.scss';
 @import './styles/pages/ProductPage.scss';
 
-.App {
-    height: 100%;
+.Home-Page {
+    width: 100vw;
     max-width: 1366px;
-    overflow: hidden;
-    box-sizing: border-box;
+    overflow-x: hidden;
 }
