@@ -1,27 +1,41 @@
+@mixin flexStyle($direction, $justify: flex-start, $align: stretch){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin contain($maxW){
+    max-width: $maxW;
+    box-sizing: border-box;
+}
+@mixin fill {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /// Elements
-@import './styles/elements/dropdown.scss';
-@import './styles/elements/button.scss';
-@import './styles/elements/filterBtn.scss';
+@import './styles/elements/dropdown';
+@import './styles/elements/button';
+@import './styles/elements/filterBtn';
 
 /// Modules
-@import './styles/modules/navbar.scss';
-@import './styles/modules/navbarCollapsed.scss';
-@import './styles/modules/footer.scss';
-@import './styles/modules/productTile.scss';
-@import './styles/modules/filterMenu.scss';
-@import './styles/modules/productCarousel.scss';
-@import './styles/modules/hero.scss';
-@import './styles/modules/mediaPanel.scss';
+@import './styles/modules/navbar';
+@import './styles/modules/navbarCollapsed';
+@import './styles/modules/footer';
+@import './styles/modules/productTile';
+@import './styles/modules/filterMenu';
+@import './styles/modules/productCarousel';
+@import './styles/modules/hero';
+@import './styles/modules/mediaPanel';
 
 /// Pages
-@import './styles/pages/Landing.scss';
-@import './styles/pages/Products.scss';
-@import './styles/pages/ProductPage.scss';
+@import './styles/pages/Landing';
+@import './styles/pages/Products';
+@import './styles/pages/ProductPage';
 
 .Home-Page {
-    max-width: 1366px;
+    @include contain(1366px);
     height: 100%;
     overflow-x: hidden;
-    box-sizing: border-box;
     margin: 0 auto;
 }

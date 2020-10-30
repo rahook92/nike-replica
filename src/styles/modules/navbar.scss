@@ -1,14 +1,16 @@
 .Navbar {
+    @include flexStyle(row, space-evenly, flex-end);
     width: 100%;
     height: 10%;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-evenly;
     margin-top: 20px;
 }
 .Shopping-Bag-Icon {
     margin-left: 25px;
+    @media (max-width: 1000px){
+        height: 24px;
+        width: 24px;
+        margin-left: 10px;
+    }
 }
 .Nav-Icons {
     width: 120px;
@@ -47,14 +49,20 @@
     z-index: 2;
     position: relative;
     top: 39px;
+    @media (max-width: 1000px){
+        svg {
+            height: 28px;
+            width: 18px;
+            
+        }
+    }
 }
 .Link-List {
+    @include flexStyle(row);
     text-decoration: none;
     height: 40px;
     padding-top: 8px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
 }
 .Logo {
     object-fit: cover;
@@ -64,6 +72,11 @@
     text-align: center;
     padding: 8px 0 0 0;
     box-sizing: border-box;
+    @media (max-width: 1000px){
+        width: 80px;
+        height: 80px;
+        padding: 4px 0 0 0;
+    }
 }
 
 .NavLinks {
@@ -82,6 +95,9 @@
         border-bottom: 2px solid black;
         cursor: pointer
     }
+    @media (max-width: 1000px){
+        font-size: 14px;
+    }
 }
 
 .Links {
@@ -97,34 +113,14 @@
 }
 
 @media (max-width: 1000px){
-    .NavLinks {
-        font-size: 14px;
-    }
     .Search-Bar {
         width: 110px;
         height: 30px;
         bottom: 10px;
     }
-    .Search-Button {
-        svg {
-            height: 28px;
-            width: 18px;
-            
-        }
-    }
-    .Logo {
-        width: 80px;
-        height: 80px;
-        padding: 4px 0 0 0;
-    }
     .Favorite-Icon {
         height: 24px;
         width: 24px;
         margin-left: 20px;
-    }
-    .Shopping-Bag-Icon {
-        height: 24px;
-        width: 24px;
-        margin-left: 10px;
     }
 }

@@ -1,22 +1,41 @@
 .media-container-lrg {
+    @include flexStyle(row, space-between);
     width: 100%;
     height: 700px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     .Links {
         width: 48%;
+    }
+    @media(max-width: 1000px){
+        height: 500px;
+    }
+    @media(max-width: 700px){
+        flex-direction: column;
+        height: 100%;
+        .Links {
+            width: 100%;
+            height: 600px;
+            margin-bottom: 10px;
+        }
     }
 }
 
 .media-container-med {
-    width: 100%;
+    @extend .media-container-lrg;
     height: 550px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     .Links {
         width: 32%;
+    }
+    @media(max-width: 1000px){
+        height: 450px;
+    }
+    @media(max-width: 700px){
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .Links {
+            width: 100%;
+        }
     }
 }
 
@@ -26,9 +45,7 @@
 }
 
 .image-container-med {
-    position: relative;
-    height: 100%;
-    // width: 400px;   
+    @extend .image-container-lrg;
 }
 
 img {
@@ -46,50 +63,13 @@ img {
     }
 }
 .bottom-left {
-    position: absolute;
+    @extend .top-left;
     top: 80%;
-    left: 20px;
-    p {
-        font-size: 24px;
-        margin: 10px;
-    }
 }
 .image-label {
     font-size: 20px;
     margin-top: 10px;
-}
-
-@media(max-width: 1000px){
-    .media-container-lrg {
-        height: 500px;
-        .Links {
-            width: 48%;
-        }
-    }
-    .image-label {
+    @media(max-width: 1000px){
         font-size: 16px;
-    }
-    .media-container-med {
-        height: 450px;
-    }
-}
-@media(max-width: 700px){
-    .media-container-lrg {
-        flex-direction: column;
-        height: 100%;
-        .Links {
-            width: 100%;
-            height: 600px;
-            margin-bottom: 10px;
-        }
-    }
-    .media-container-med {
-        width: 100%;
-        height: 100%;
-        flex-direction: column;
-        justify-content: space-evenly;
-        .Links {
-            width: 100%;
-        }
     }
 }

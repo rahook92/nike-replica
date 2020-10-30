@@ -9,15 +9,22 @@
 .label-lrg {
     font-size: 30px;
     margin: 0 0 2% 0;
+    @media(max-width: 500px) {
+        font-size: 20px;
+    }
 }
 
 .label-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexStyle(row, space-between);
     a {
         text-decoration: none;
         color: black;
+    }
+    @media(max-width: 500px) {
+        a {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
 }
 
@@ -27,16 +34,3 @@
     }
 }
 
-@media(max-width: 500px) {
-    .label-lrg {
-        font-size: 20px;
-    }
-    .label-container {
-        a {
-            margin-right: 0;
-            margin-bottom: 10px;
-        }
-    }
-}
-
-//comment

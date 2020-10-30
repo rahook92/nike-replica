@@ -1,36 +1,29 @@
 .product-carousel {
+    @include flexStyle(row);
     width: 100%;
     overflow-x: scroll;
     scrollbar-width: thin;
-    display: flex;
-    flex-direction: row;  
     .product-tile {
         margin-right: 40px;
         width: 40%;
     }
     .product-img {
         width: 350px;
-    }      
-}
-@media(max-width: 1000px){
-    .product-carousel {
+    }
+    @media(max-width: 1000px){
         .product-img {
             width: 250px;
         }
         .product-tile{
             height: 400px;
         }
-    }
-}
-@media(max-width: 700px){
-    .product-carousel {
+    } 
+    @media(max-width: 700px){
         .product-img {
             width: 200px;
         }
-    }
-}
-@media(max-width: 500px){
-    .product-carousel {
+    }  
+    @media(max-width: 500px){
         .product-img {
             width: 175px;
         }

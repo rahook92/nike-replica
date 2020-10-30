@@ -1,54 +1,78 @@
 .Product-page {
+    @include contain(1366px);
+    @include flexStyle(row);
     width: 100vw;
-    max-width: 1366px;
-    display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     margin-top: 50px;
     padding: 0 20px;
-    box-sizing: border-box;
+    @media (max-width: 1000px){
+        flex-direction: column;
+    }
 }
-    // .product-carousel {
-    //     margin: 0 0 100px 2.5%;
-    // }
 
 .product-snapshots-container {
     width: 70%;
+    @media (max-width: 1000px){
+        width: 100%;
+        height: 200vh;
+        margin-bottom: 50px;
+    }
+    @media (max-width: 900px){
+        height: 175vh;
+    }
+    @media (max-width: 800px){
+        height: 150vh;
+    }
+    @media (max-width: 700px){
+        height: 125vh;
+    }
+    @media (max-width: 600px){
+        height: 90vh;
+    }
+    @media (max-width: 500px){
+        height: 75vh;
+    }
 }
 
 .product-snapshots {
-    // width: 100%;
-    display: flex;
-    flex-direction: row;
+    @include flexStyle(row);
     flex-wrap: wrap;
     padding: 20px 0;
     margin: 0 10px;
+    @media (max-width: 1000px){
+        flex-wrap: nowrap;
+        overflow-X: scroll;
+        height: 100%;
+    }
 }
 
 .snapshot {
     height: 520px;
     width: 45%;
-    background-color: blue;
     margin: 0 0 2.5% 2.5%;
+    @media (max-width: 1000px){
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .product-options-container {
     width: 30%;
     box-sizing: border-box;
     padding: 25px;
+    @media (max-width: 1000px){
+        width: 100%;
+    }
 }
 
 .product-header-container {
-    display: flex;
-    flex-direction: column;
+    @include flexStyle(column);
     padding: 0 10px;
 }
 
 .product-type {
+    @include flexStyle(row, space-between);
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .product-header {
@@ -65,12 +89,9 @@
 }
 
 .product-sizing-labels {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flexStyle(row, space-between);
+    @include fill;
     padding: 10px;
-    box-sizing: border-box;
     margin-top: 5%;
 }
 
@@ -79,11 +100,9 @@
 }
 
 .product-sizing-buttons-container {
-    width: 100%;  
-    box-sizing: border-box;
-    display: flex;
+    @include flexStyle(row);
+    @include fill;
     flex-wrap: wrap;
-    flex-direction: row;
     padding-top: 8px;
 }
 
@@ -102,15 +121,22 @@
     &:active {
         border: 1px solid black;
     }
+    @media (max-width: 1000px){
+        width: 49%;     
+    }
+    @media (max-width: 900px){
+        width: 48%;
+    }
+    @media (max-width: 500px){
+        width: 47%;
+    }
 }
 
 .product-save-buttons-container {
-    width: 100%;
+    @include flexStyle(column);
+    @include fill;
     padding: 10px;
     margin-top: 10px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
     button {
         width: 100%;
         height: 60px;
@@ -168,85 +194,4 @@
 .carousel-container {
     width: 100%;
 }
-
-@media (max-width: 1000px){
-    .Product-page {
-        flex-direction: column;
-    }
-    .product-snapshots-container {
-        width: 100%;
-        height: 200vh;
-        margin-bottom: 50px;
-    }
-    .product-snapshots {
-        flex-wrap: nowrap;
-        overflow-X: scroll;
-        height: 100%;
-    }
-    .snapshot {
-        height: 100%;
-        width: 100%;
-        background-color: blue;
-        margin: 0 0 2.5% 2.5%;
-    }
-    .product-options-container {
-        width: 100%;
-    }
-    .product-size-btn {
-        width: 49%;
-        height: 55px;
-        border-radius: 6px;
-        border: 1px solid darkgrey;
-        outline: none;
-        margin: 0 0 8px 8px;
-        background-color: white;
-        cursor: pointer;
-        &:hover {
-            border: 1px solid black;
-        }
-        &:active {
-            border: 1px solid black;
-        }
-    }
-}
-@media (max-width: 900px){
-    .product-snapshots-container {
-        width: 100%;
-        height: 175vh;
-        margin-bottom: 50px;
-    }
-    .product-size-btn {
-        width: 48%;
-    }
-}
-@media (max-width: 800px){
-    .product-snapshots-container {
-        width: 100%;
-        height: 150vh;
-        margin-bottom: 50px;
-    }
-}
-@media (max-width: 700px){
-    .product-snapshots-container {
-        width: 100%;
-        height: 125vh;
-        margin-bottom: 50px;
-    }
-}
-@media (max-width: 600px){
-    .product-snapshots-container {
-        width: 100%;
-        height: 90vh;
-        margin-bottom: 50px;
-    }
-}
-@media (max-width: 500px){
-    .product-snapshots-container {
-        width: 100%;
-        height: 75vh;
-        margin-bottom: 50px;
-    }
-    .product-size-btn {
-        width: 47%;
-    }
-}
+  

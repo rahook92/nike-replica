@@ -2,6 +2,12 @@
     height: 600px;
     width: 100%;
     position: relative;
+    @media(max-width: 1000px){
+        height: 500px;
+    }
+    @media(max-width: 700px){
+        height: 350px;
+    }
 }
 
 img {
@@ -21,37 +27,15 @@ img {
     button {
         margin-top: 20px;
     }
-}
-
-.hero-bottom-left {
-    top: 60%;
-    left: 30px;
-}
-
-.hero-top-left {
-    top: 10%;
-    left: 30px;
-}
-
-@media(max-width: 1000px){
-    .hero-image-container {
-        height: 500px;
-    }
-    .promo-text {
+    @media(max-width: 1000px){
         .big {
             font-size: 40px;
-            line-height: 95%;
         }
         button {
             margin-top: 15px;
         }
     }
-}
-@media(max-width: 700px){
-    .hero-image-container {
-        height: 350px;
-    }
-    .promo-text {
+    @media(max-width: 700px){
         width: 200px;
         .big {
             font-size: 26px;
@@ -60,8 +44,18 @@ img {
             margin-top: 10px;
         }
     }
-    .hero-bottom-left {
+}
+
+.hero-bottom-left {
+    top: 60%;
+    left: 30px;
+    @media(max-width: 700px){
         top: 225px;
         left: 20px;
     }
+}
+
+.hero-top-left {
+    top: 10%;
+    left: 30px;
 }

@@ -2,6 +2,13 @@
     width: 15%;
     height: 50%;
     margin-right: 40px;
+    @media(max-width: 1000px){
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+    }
 }
 
 .secondary-filters {
@@ -9,22 +16,31 @@
 }
 
 .secondary-filter-container {
-    // display: flex;
-    // flex-direction: row;
     cursor: pointer;
     justify-content: space-between;
     border-top: 1px solid lightgrey;
+    @media(max-width: 1000px){
+        border-top: none;
+        border-bottom: 1px solid lightgrey;
+        background-color: white;
+    }
 }
 .secondary-filter-content {
     padding-bottom: 15px;
     button {
         padding: 4px 0;
     }
+    @media(max-width: 1000px){
+        padding-left: 20px;
+    }
 }
 
 .secondary-filter-label {
     font-size: 16px;
     padding: 15px 0;
+    @media(max-width: 1000px){
+        padding-left: 20px;        
+    }
 }
 
 .secondary-filter-icon {
@@ -46,8 +62,7 @@
 }
 
 .secondary-filter-item {
-    display: flex;
-    flex-direction: row;
+    @include flexStyle(row);
     button {
         margin-left: 10px;
         line-height: 100%;
@@ -64,29 +79,6 @@
 }
 @media(max-width: 1000px){
     .primary-filters {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: flex-start;
-    }
-    .filterMenu {
-        width: 100%;
-        position: absolute;
-        left: 0;
-        top: 0;
-        margin: 0;
-    }
-    .secondary-filter-container {
-        justify-content: space-between;
-        border-top: none;
-        border-bottom: 1px solid lightgrey;
-        background-color: white;
-    }
-    .secondary-filter-content {
-        padding-left: 20px;
-    }
-
-    .secondary-filter-label {
-        padding-left: 20px;        
+        @include flexStyle(row, space-evenly, flex-start);
     }
 }
